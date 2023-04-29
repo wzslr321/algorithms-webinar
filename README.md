@@ -1,1 +1,1 @@
-:)
+#### Code and explanations for topics covered during my webinar about algorithms, which took place on Sunday 30.04.2023.
