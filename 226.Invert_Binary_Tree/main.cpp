@@ -21,7 +21,6 @@ TreeNode *invertTree(TreeNode *root) {
     return root;
 }
 
-
 int main() {
     return 0;
 }

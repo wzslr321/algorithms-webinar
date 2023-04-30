@@ -1,5 +1,15 @@
-#include <iostream>
 #include <vector>
+
+int maxAreaSlow(const std::vector<int> &height) {
+    int ans = INT_MIN;
+    for (int i = 0; i < height.size(); ++i) {
+        for (int j = i + 1; j < height.size(); ++j) {
+            ans = std::max(ans, (j - i) * std::min(height[i], height[j]));
+        }
+    }
+
+    return ans;
+}
 
 int maxArea(const std::vector<int> &height) {
     int n = static_cast<int>(height.size());
@@ -27,6 +37,9 @@ void test() {
 
     assert(maxArea(t1_input) == t1_ans);
     assert(maxArea(t2_input) == t2_ans);
+
+    assert(maxAreaSlow(t1_input) == t1_ans);
+    assert(maxAreaSlow(t2_input) == t2_ans);
 }
 
 int main() {

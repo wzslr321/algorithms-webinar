@@ -1,6 +1,4 @@
-#include <iostream>
 #include <vector>
-
 
 int searchSlow(std::vector<int> &nums, int target) {
     for (int i = 0; i < nums.size(); ++i) {
